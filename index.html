@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  		<title>Astersik Manager</title>
+	</head>
+	<body>
+		Extensions: <br />
+		<div id="allExtensions">
+		</div>
+		
+		<ul>
+		<script id="extensionElement" type="text/template">
+		  <li>
+		  	Name: <%= name %>
+		  	status: <%= status %>
+		  	
+		  </li>	
+		</script>	
+		</ul>
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/underscore.min.js"></script>
+		<script src="js/backbone.min.js"></script>
+		<script src="js/script.js"></script>
+		
+	</body>
+</html>
