@@ -4,8 +4,7 @@
  * @file
  * Contains socket to the Asterisk server and
  * parser of Command action with 'sip show peers' parameter.
- */
- 
+ */ 
 //Defimes timeout of 3 seconds 
 $timeout = 3;
 //Connet to asterisk server
@@ -30,7 +29,7 @@ while ($line != "--END COMMAND--\r\n\r\n") {
 	  if(strstr($line, "sip peers")) {
 	    break;
 	  }
-	  $peer = split("[ ]+", $line);
+	  $peer = preg_split("/[ ]+/", $line);
 	  $keyed_peer = array(
 	    "name" => $peer[0],
 		"status" => $peer[6],
